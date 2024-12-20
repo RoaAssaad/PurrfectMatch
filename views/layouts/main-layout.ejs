@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body class="d-flex flex-column">
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <main class="container flex-grow-1">
+        <%- body %>
+    </main>
+    <footer class="mt-auto">
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+</html>

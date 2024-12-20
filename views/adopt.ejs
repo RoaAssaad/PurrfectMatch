@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+<main class="container mt-5">
+    <h1 class="mb-4">Adopt <%= cat.Cat_Name %></h1>
+    <form action="/adopt" method="POST">
+        <input type="hidden" name="Cat_ID" value="<%= cat.Cat_ID %>">
+        <input type="hidden" name="User_ID" value="<%= userID %>"> <!-- Assume userID is passed to the view -->
+        <button type="submit" class="btn btn-primary">Submit Adoption Request</button>
+    </form>
+</main>
+<%- include('partials/footer') %>

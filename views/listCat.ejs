@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+<main class="container mt-5">
+    <h1 class="mb-4"><%= title %></h1>
+    <form action="/list-cat" method="POST">
+        <div class="form-group">
+            <label for="Cat_Name">Cat Name</label>
+            <input type="text" class="form-control" id="Cat_Name" name="Cat_Name" required>
+        </div>
+        <div class="form-group">
+            <label for="Cat_DOB">Date of Birth</label>
+            <input type="date" class="form-control" id="Cat_DOB" name="Cat_DOB">
+        </div>
+        <div class="form-group">
+            <label for="Cat_Breed">Breed</label>
+            <input type="text" class="form-control" id="Cat_Breed" name="Cat_Breed">
+        </div>
+        <div class="form-group">
+            <label for="Cat_Gender">Gender</label>
+            <select class="form-control" id="Cat_Gender" name="Cat_Gender" required>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Cat_HealthStatus">Health Status</label>
+            <input type="text" class="form-control" id="Cat_HealthStatus" name="Cat_HealthStatus">
+        </div>
+        <div class="form-group">
+            <label for="Cat_Description">Description</label>
+            <textarea class="form-control" id="Cat_Description" name="Cat_Description" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="Cat_Image">Image URL</label>
+            <input type="url" class="form-control" id="Cat_Image" name="Cat_Image">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</main>
+<%- include('partials/footer') %>

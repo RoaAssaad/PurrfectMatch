@@ -1,0 +1,11 @@
+<% layout('layouts/main-layout') %>
+<h1>Adoption Requests</h1>
+<ul class="list-group">
+    <% adoptionRequests.forEach(adoption => { %>
+        <li class="list-group-item">
+            <a href="/api/adoption-request/<%= adoption.Request_ID %>">
+                Request #<%= adoption.Request_ID %> - <%= adoption.Request_Status %>
+            </a>
+        </li>
+    <% }) %>
+</ul>

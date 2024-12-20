@@ -1,0 +1,73 @@
+/* Style for the header image */
+.header-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.logo-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Additional styling */
+.hero-section {
+    background-color: #f7f3f1;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 72px;
+    color: #2f54eb;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Navigation links */
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f56a79;
+}
+
+/* Button in the navigation */
+.navbar-light .navbar-nav .btn {
+    margin-left: 10px;
+}
+
+/* Style for the login container */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Style for the alert messages */
+.alert {
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+}

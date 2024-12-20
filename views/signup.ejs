@@ -1,0 +1,28 @@
+<%- include('layouts/main-layout', {
+    title: 'Sign Up',
+    body: `
+    <div class="signup-container">
+        <h1 class="text-center">Sign Up</h1>
+        <p class="text-center">Already a member? <a href="/login">Log In</a></p>
+        <form action="/signup" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="User_Username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="User_Email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="User_Password" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="User_DOB" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </form>
+    </div>
+    `
+}) %>

@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+<main class="container mt-5">
+    <h1 class="mb-4"><%= title %></h1>
+    <div class="row">
+        <% shelters.forEach(shelter => { %>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= shelter.Shelter_Name %></h5>
+                        <p class="card-text">
+                            Address: <%= shelter.Shelter_Address %><br>
+                            Contact Info: <%= shelter.Shelter_ContactInfo %>
+                        </p>
+                        <a href="/api/shelters/<%= shelter.Shelter_ID %>" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</main>
+<%- include('partials/footer') %>

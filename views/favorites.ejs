@@ -1,0 +1,13 @@
+<% layout('layouts/main-layout') %>
+<h1>Your Favorite Cats</h1>
+<ul class="list-group">
+    <% favorites.forEach(favorite => { %>
+        <li class="list-group-item">
+            <a href="/api/cats/<%= favorite.Cat_ID %>"><%= favorite.Cat_Name %></a>
+            <form action="/api/favorites/<%= favorite.User_ID %>/<%= favorite.Cat_ID %>" method="post" class="float-right">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>

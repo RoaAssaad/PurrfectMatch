@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+<main class="container mt-5">
+    <h1 class="mb-4"><%= title %></h1>
+    <div class="row">
+        <% if (adoptionRequests && adoptionRequests.length > 0) { %>
+            <% adoptionRequests.forEach(request => { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Adoption Request for <%= request.Cat_Name %></h5>
+                            <p class="card-text">
+                                Request Date: <%= new Date(request.Request_Date).toDateString() %><br>
+                                Status: <%= request.Request_Status %>
+                            </p>
+                            <button class="btn btn-danger" onclick="deleteAdoptionRequest('<%= request.Request_ID %>')">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No adoption requests found.</p>
+        <% } %>
+    </div>
+</main>
+<%- include('partials/footer') %>
+
+<script>
+    function deleteAdoptionRequest(requestId) {
+        fetch(`/api/adoption-requests/${requestId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Adoption request deleted successfully!');
+                location.reload();
+            } else {
+                alert('Failed to delete adoption request.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to delete adoption request.');
+        });
+    }
+</script>
